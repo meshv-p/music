@@ -5,9 +5,7 @@ function play(){
         document.getElementById('pause').style.display = "block";
         document.getElementById('play').style.display = "none";
        document.getElementById('track').play();
-       document.getElementById('start').innerHTML = Math.floor(track.currentTime/60);
-       document.getElementById('end').innerHTML = Math.floor(track.duration)/60;
-        document.getElementById('pro').Max = Math.floor(track.currentTime/60);
+     
 
     }
     else{
