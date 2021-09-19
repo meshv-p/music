@@ -22,16 +22,14 @@
         <!-- <div class="container-fluid "> <meter class="w-100 mx-3" max="100" value="30"></meter> </div> -->
         <!-- Music bar -->
         <div class="container-fluid">
-            <div class="progress mt-3 ">
-                <div class="progress-bar  bg-${2|success,info,success,warning,wardanger}}" role="progressbar"
-                    style="width: 25%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" ${6|
-                    ,progress-bar-animated}></div>
+            <div class="progrss mt-3 ">
+                <input type="range" class="w-100 slider" id="pro" min="10" max="100" value="30">
             </div>
             <div class="d-flex bd-highlight mb-3 ">
-                <div class="me-auto p-2 ps-0 pt-1 h6 bd-highlight"><small><time>10:10</time></small></div>
-                
-                <div class="p-2 pt-1 pe-0 h6  bd-highlight"><small><time>20:10</time></small></div>
-              </div>
+                <div class="me-auto p-2 ps-0 pt-1 h6 bd-highlight"><small id="start"><time>10:10</time></small></div>
+
+                <div class="p-2 pt-1 pe-0 h6  bd-highlight"><small id="end"><time>20:10</time></small></div>
+            </div>
         </div>
         <!-- Music controlls -->
         <div class="container-fluid  p-3 w-100  " style="width: 200px;">
@@ -47,9 +45,11 @@
                     <div class="d-flex flex-col mx-auto justify-content-center my-auto rounded-circle text-center h4"
                         style="vertical-align: middle;width: 50px;height:50px;background-color: #cc1100;">
                         <button class="bg-transparent border-0" onclick="play()">
-                            <audio src="Let Me Love You - DJ Snake  Justin Bieber (128kbps)-(MusicVilla.In).mp3" id="track"></audio>
-                            <i class="fas fa-play my-auto ms-1" style="color: #ffffffff;" id="play"></i>
-                            <i class="fas fa-pause my-auto ms-1" style="color: #ffffff;display: none;" id="pause" ></i></button>
+                            <audio src="Let Me Love You - DJ Snake  Justin Bieber (128kbps)-(MusicVilla.In).mp3"
+                                id="track"></audio>
+                            <i class="fas fa-play my-auto ms-1" title="Play" style="color: #ffffffff;" id="play"></i>
+                            <i class="fas fa-pause my-auto ms-1" title="Pause" style="color: #ffffff;display: none;"
+                                id="pause"></i></button>
                         </button>
                     </div>
                 </div>
