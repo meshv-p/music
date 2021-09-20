@@ -14,7 +14,7 @@
 <body>
     <div class="p-3 position-absolute shadow-lg top-50 start-50 translate-middle border-danger border  border-1" style="background-color: antiquewhite;border-radius: 10px;width: 470px;">
         <div class="Title">
-            <div class="fw-bold text-center p-1 " id="title">On My Way.mp3</div>
+            <div class="fw-bold text-center p-1 overflow-auto" id="title">On My Way.mp3</div>
         </div>
        <style>
            body{
@@ -98,7 +98,24 @@
             </div>
         </div>
     </div>
+    <!-- <button type="button" class="btn btn-primary btn-sm" id="number">1 OF 3 songs</button> -->
+    <div class="btn-group" id="drop">
+        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" id="number" data-bs-toggle="dropdown" aria-expanded="false">
+          1 OF 3 Songs
+        </button>
+        <ul class="dropdown-menu w-50 ms-1  overflow-auto" id="ullist">
+        </ul>
+      </div>
+    <style>
+        #drop{
+            top: 5vh;
+    /* right: -121%; */
+    left: 67.6vw;
+    z-index: -3;
+        }
+    </style>
     <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>
 
 </html>
