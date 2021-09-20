@@ -12,43 +12,64 @@
 </head>
 
 <body>
-    <div class="p-3 position-absolute top-50 start-50 translate-middle border-dark border rounded border-1">
+    <div class="p-3 position-absolute shadow-lg top-50 start-50 translate-middle border-danger border rounded border-1" style="background-color: antiquewhite;">
         <div class="container-fluid ">
-            <div class="fw-bold text-center">On My Way</div>
+            <div class="fw-bold text-center" id="title">On My Way.mp3</div>
         </div>
-        <div class="mt-3 Music_Pic"><img class="img-thumbnail rounded-circle " style="height: 300px; width: 300px;"
+       <style>
+           .go{
+               animation: go .6s ease-out infinite;   /*23 25  5*/
+           }
+           @keyframes go {
+               0%{
+                transform: rotate(.1deg);
+                transition: .5s;
+               }
+               100%{
+                transform: rotate(360deg);
+                transition: .5s;
+               }
+           }
+       </style>
+
+        <div class="mt-3 Music_Pic d-flex justify-content-center"><img class="img-thumbnail border-1 border-danger border rounded-circle bg-transparent" style="height: 300px; width: 300px;"
                 src="https://media.istockphoto.com/photos/sound-wave-picture-id1287065554?b=1&k=20&m=1287065554&s=170667a&w=0&h=6JIPYTu98DAXdChKSeu-Td3zv8KyLC3yhu-rWfkDQQc="
-                alt="pic"></div>
+                alt="pic" id="pic"></div>
         <!-- <div class="container-fluid "> <meter class="w-100 mx-3" max="100" value="30"></meter> </div> -->
         <!-- Music bar -->
-        <div class="container-fluid">
+        <div class="container-fluid ">
             <div class="progrss mt-3 ">
-                <input type="range" class="w-100 slider" id="pro" min="10" max="100" value="30">
+                <input type="range" class="w-100 slider" id="pro" min=" " max=" " value=" ">
             </div>
             <div class="d-flex bd-highlight mb-3 ">
-                <div class="me-auto p-2 ps-0 pt-1 h6 bd-highlight"><small id="start"><time>10:10</time></small></div>
+                <div class="me-auto p-2 ps-0 pt-1 h6 bd-highlight"><small id="start"><time>00:00</time></small></div>
 
-                <div class="p-2 pt-1 pe-0 h6  bd-highlight"><small id="end"><time>20:10</time></small></div>
+                <div class="p-2 pt-1 pe-0 h6  bd-highlight"><small id="end"><time>00:00</time></small></div>
             </div>
         </div>
         <!-- Music controlls -->
-        <div class="container-fluid  p-3 w-100  " style="width: 200px;">
-            <div class="row">
+        <div class="container-fluid  p-1 w-100  " style="width: 200px;">
+            <div class="  d-flex mx-auto w-75">
+                <div class="  d-flex me-auto p-2   pt-1 btn" ><button class="bg-transparent border-0" onclick="sec_less()" title="10 Sec Previous"><small class="fw-bold">10s - </small><i class="fas fa-undo-alt" style="font-size: 20px;"></i></button></div>
+                <div class=" d-flex  me-1 p-2  pt-1 pe-0" ><button class="bg-transparent border-0" onclick="sec_more()" title="10 Sec Next"><i class="fas fa-redo-alt " style="font-size: 20px;"><small> 10s +</small></i></button></div>
+            </div>
+                
+            <div class="row ">
                 <div class="col align-middle my-auto">
                     <div class="d-flex flex-col mx-auto   justify-content-center my-auto rounded-circle text-center h4"
                         style="vertical-align: middle;width: 50px;height:50px;background-color: #cc1100;">
-                        <button class="bg-transparent border-0"><i class="fas fa-step-backward my-auto"
+                        <button class="bg-transparent border-0" title="Previous Song" onclick="previoussong()"><i class="fas fa-step-backward my-auto"
                                 style="color: #ffffffff;"></i></button>
                     </div>
                 </div>
-                <div class="col align-middle my-auto">
+                <div class="col  align-middle my-auto">
                     <div class="d-flex flex-col mx-auto justify-content-center my-auto rounded-circle text-center h4"
                         style="vertical-align: middle;width: 50px;height:50px;background-color: #cc1100;">
                         <button class="bg-transparent border-0" onclick="play()">
                             <audio src="Let Me Love You - DJ Snake  Justin Bieber (128kbps)-(MusicVilla.In).mp3"
                                 id="track"></audio>
                             <i class="fas fa-play my-auto ms-1" title="Play" style="color: #ffffffff;" id="play"></i>
-                            <i class="fas fa-pause my-auto ms-1" title="Pause" style="color: #ffffff;display: none;"
+                            <i class="fas fa-pause my-auto" title="Pause" style="color: #ffffff;display: none;"
                                 id="pause"></i></button>
                         </button>
                     </div>
@@ -56,11 +77,10 @@
                 <div class="col  align-middle my-auto">
                     <div class="d-flex flex-col mx-auto justify-content-center my-auto rounded-circle text-center h4"
                         style="vertical-align: middle;width: 50px;height:50px;background-color: #cc1100;">
-                        <button class="bg-transparent border-0"><i class="fas fa-step-forward my-auto"
-                                style="color: #ffffffff;"></i></button>
+                        <button class="bg-transparent border-0" onclick="nextsong()" title="Next Song"><i class="fas fa-step-forward my-auto"
+                                style="color: #ffffffff;" ></i></button>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
