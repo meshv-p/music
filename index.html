@@ -12,11 +12,14 @@
 </head>
 
 <body>
-    <div class="p-3 position-absolute shadow-lg top-50 start-50 translate-middle border-danger border rounded border-1" style="background-color: antiquewhite;">
+    <div class="p-3 position-absolute shadow-lg top-50 start-50 translate-middle border-danger border  border-1" style="background-color: antiquewhite;border-radius: 10px;">
         <div class="container-fluid ">
             <div class="fw-bold text-center" id="title">On My Way.mp3</div>
         </div>
        <style>
+           body{
+               background-color:    #f5e0e5;
+           }
            .go{
                animation: go .6s ease-out infinite;   /*23 25  5*/
            }
@@ -30,6 +33,14 @@
                 transition: .5s;
                }
            }
+           input[type="range"] ::-webkit-meter-bar{
+            height: 5px;
+      width: 7px;
+           }
+           input[type="range"]::-webkit-slider-thumb {
+      height: 5px;
+      width: 7px;
+    }
        </style>
 
         <div class="mt-3 Music_Pic d-flex justify-content-center"><img class="img-thumbnail border-1 border-danger border rounded-circle bg-transparent" style="height: 300px; width: 300px;"
