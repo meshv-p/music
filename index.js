@@ -57,7 +57,7 @@ function sec_less() {
     console.log(track.currentTime-10);
   }
   
-pro.addEventListener("click", changeProgressBar);
+pro.addEventListener("input", changeProgressBar);
 
 
 function nextsong(){
