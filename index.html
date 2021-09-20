@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="gu">
 
 <head>
     <meta charset="UTF-8">
@@ -12,9 +12,9 @@
 </head>
 
 <body>
-    <div class="p-3 position-absolute shadow-lg top-50 start-50 translate-middle border-danger border  border-1" style="background-color: antiquewhite;border-radius: 10px;">
-        <div class="container-fluid ">
-            <div class="fw-bold text-center" id="title">On My Way.mp3</div>
+    <div class="p-3 position-absolute shadow-lg top-50 start-50 translate-middle border-danger border  border-1" style="background-color: antiquewhite;border-radius: 10px;width: 470px;">
+        <div class="Title">
+            <div class="fw-bold text-center p-1 " id="title">On My Way.mp3</div>
         </div>
        <style>
            body{
@@ -22,6 +22,9 @@
            }
            .go{
                animation: go .6s ease-out infinite;   /*23 25  5*/
+           }
+           .scale{
+               transform: scale(1.25);
            }
            @keyframes go {
                0%{
@@ -50,7 +53,7 @@
         <!-- Music bar -->
         <div class="container-fluid ">
             <div class="progrss mt-3 ">
-                <input type="range" class="w-100 slider" id="pro" min=" " max=" " value=" ">
+                <input type="range" class="w-100 slider " id="pro" min=" " max=" " value=" ">
             </div>
             <div class="d-flex bd-highlight mb-3 ">
                 <div class="me-auto p-2 ps-0 pt-1 h6 bd-highlight"><small id="start"><time>00:00</time></small></div>
@@ -78,7 +81,7 @@
                         style="vertical-align: middle;width: 50px;height:50px;background-color: #cc1100;">
                         <button class="bg-transparent border-0" onclick="play()">
                             <audio src="Let Me Love You - DJ Snake  Justin Bieber (128kbps)-(MusicVilla.In).mp3"
-                                id="track"></audio>
+                                id="track" ></audio>
                             <i class="fas fa-play my-auto ms-1" title="Play" style="color: #ffffffff;" id="play"></i>
                             <i class="fas fa-pause my-auto" title="Pause" style="color: #ffffff;display: none;"
                                 id="pause"></i></button>
