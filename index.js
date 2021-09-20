@@ -12,12 +12,21 @@ const song = ['Let Me Love You - DJ Snake  Justin Bieber (128kbps)-(MusicVilla.I
 document.getElementById('title').innerHTML = song[0];
 
 let songindex = 0;
+
+
 function play(){
-  document.getElementById('track').play();
-    if(document.getElementById('pause').style.display != "block"){
+    // if(document.getElementById('pause').style.display != "block"){
+    //     document.getElementById('pause').style.display = "block";
+    //     document.getElementById('play').style.display = "none";
+    //    document.getElementById('track').play();
+    //   //  document.getElementById('pic').classList.add('scale');
+    //    document.getElementById('pic').classList.add('go');
+    // }
+    if(track.paused){
         document.getElementById('pause').style.display = "block";
         document.getElementById('play').style.display = "none";
        document.getElementById('track').play();
+      //  document.getElementById('pic').classList.add('scale');
        document.getElementById('pic').classList.add('go');
     }
     else{
@@ -43,7 +52,9 @@ function progressValue() {
 
   start.textContent = formatTime(track.currentTime);
   end.textContent = formatTime(track.duration-track.currentTime);
-  // console.log(formatTime(track.duration-track.currentTime));
+  // if(formatTime(track.duration-track.currentTime) == `0:00`){
+  //   stop();
+  // }
 }
 
 setInterval(progressValue, 500);
@@ -83,3 +94,4 @@ function previoussong(){
   play();
  
 }
+document.getElementById('track').addEventListener('ended',nextsong);
