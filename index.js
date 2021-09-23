@@ -68,6 +68,7 @@ function changeProgressBar() {
 function sec_more() {
     track.currentTime =track.currentTime + 10;
     console.log(track.currentTime+10);
+    document.getElementById('sec_more').classList.add('sec_more');
   }
 function sec_less() {
     track.currentTime =track.currentTime - 10;
